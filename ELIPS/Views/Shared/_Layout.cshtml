@@ -8,18 +8,27 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                @Html.ActionLink("ELIPS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="navbar-fixed-top container">
+        <div class="row">
+            <div class="col-lg-1">
+                @Html.ActionLink("ELIPS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 25px" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <div class="col-lg-4" style="margin-top:10px; margin-left:10px">
+                <div class="form-inline">
+                    <input type="text" class="form-control" placeholder="Czego szukasz?"/>
+                    <button type="submit" class="btn btn-primary">Szukaj</button>
+                </div>
             </div>
+    </div>
+
+    </div>
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
         </div>
     </div>
     <div class="container body-content">
